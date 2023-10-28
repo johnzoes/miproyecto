@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import java.awt.*;
 public class john extends JFrame {
     JLabel lbl;
     JTextField txtnombre;
@@ -17,6 +18,8 @@ public class john extends JFrame {
          p1 = new JPanel();
          p1.setBounds(0,0,400,600);
          p1.setVisible(true);
+         p1.setLayout(null);
+         p1.setBackground(new Color(34,34,34));
         f1.add(p1);
         interfaz();
 
@@ -24,17 +27,22 @@ public class john extends JFrame {
     }
 
     public void interfaz(){
-        lbl = new JLabel("Ingrese Usuario");
-        lbl.setBounds(20,10,100,20);
+        this.setLayout(null);
+        lbl = new JLabel("Usuario");
+        lbl.setBounds(10,50,100,20);
+        lbl.setFont(new Font("SF Pro", 1, 20));
+        lbl.setForeground(Color.white);
         p1.add(lbl);
 
 
         txtnombre = new JTextField();
-        txtnombre.setBounds(150,70,100,20);
+        txtnombre.setBounds(100,70,100,20);
         p1.add(txtnombre);
 
-        btnok = new JButton("ok");
-        btnok.setBounds(200,200,50,20);
+        btnok = new JButton("Ok");
+        btnok.setBounds(200,200,70,20);
+        btnok.setBackground(Color.white);
+        btnok.setFont(new Font("SF Pro", 1, 15));
         p1.add(btnok);
         }
 
